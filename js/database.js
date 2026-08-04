@@ -21,7 +21,7 @@ function initDatabase() {
     request.onsuccess = (event) => {
 
         db = event.target.result;
-
+        updateDashboard();
         console.log("Baza de date conectată.");
 
     };
