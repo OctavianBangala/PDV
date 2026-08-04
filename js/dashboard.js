@@ -3,12 +3,7 @@
 // dashboard.js
 // ======================================
 
-const ROOMS = [
-    "1A","2A","3A","4A","5A","6A",
-    "1B","2B","3B","4B","5B","6B","7B","8B","9B"
-];
-
-function updateDashboard() {
+function loadDashboard() {
 
     if (!db) return;
 
@@ -24,14 +19,15 @@ function updateDashboard() {
         const today = new Date().toISOString().split("T")[0];
 
         let occupiedRooms = new Set();
-        let checkInToday = 0;
-        let checkOutToday = 0;
 
-        reservations.forEach(r => {
+        let todayCheckIn = 0;
+        let todayCheckOut = 0;
 
-            if (r.rooms) {
+        reservations.forEach(reservation => {
 
-                r.rooms.forEach(room => {
+            if (reservation.rooms) {
+
+                reservation.rooms.forEach(room => {
 
                     occupiedRooms.add(room);
 
@@ -39,11 +35,11 @@ function updateDashboard() {
 
             }
 
-            if (r.checkIn === today)
-                checkInToday++;
+            if (reservation.checkIn === today)
+                todayCheckIn++;
 
-            if (r.checkOut === today)
-                checkOutToday++;
+            if (reservation.checkOut === today)
+                todayCheckOut++;
 
         });
 
@@ -54,10 +50,10 @@ function updateDashboard() {
             ROOMS.length - occupiedRooms.size;
 
         document.getElementById("todayCheckIn").innerText =
-            checkInToday;
+            todayCheckIn;
 
         document.getElementById("todayCheckOut").innerText =
-            checkOutToday;
+            todayCheckOut;
 
     };
 
