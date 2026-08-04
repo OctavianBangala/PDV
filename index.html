@@ -100,7 +100,67 @@
             </div>
 
         </section>
+<section id="reservations">
 
+    <h2>Rezervări</h2>
+
+    <div class="reservation-toolbar">
+
+        <button id="newReservation">
+            ➕ Rezervare Nouă
+        </button>
+
+        <input
+            type="text"
+            id="searchReservation"
+            placeholder="Caută client..."
+        >
+
+    </div>
+
+    <div id="reservationForm" class="hidden">
+
+        <input
+            id="clientName"
+            type="text"
+            placeholder="Nume client">
+
+        <input
+            id="clientPhone"
+            type="text"
+            placeholder="Telefon">
+
+        <input
+            id="checkIn"
+            type="date">
+
+        <input
+            id="checkOut"
+            type="date">
+
+        <h3>Selectează camere</h3>
+
+        <div id="roomsContainer">
+
+        </div>
+
+        <textarea
+            id="notes"
+            placeholder="Observații"></textarea>
+
+        <button id="saveReservation">
+
+            Salvează Rezervarea
+
+        </button>
+
+    </div>
+
+    <div id="reservationList">
+
+    </div>
+
+</section>
         <section id="calendar">
 
             <h2>Calendar Rezervări</h2>
@@ -111,21 +171,6 @@
 
         </section>
 
-        <section id="reservations">
-
-            <h2>Rezervări</h2>
-
-            <button id="newReservation">
-
-                + Rezervare Nouă
-
-            </button>
-
-            <div id="reservationList">
-
-            </div>
-
-        </section>
 
     </main>
 
