@@ -7,7 +7,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     console.log("Aplicația a pornit.");
-
+    initDatabase();
     initNavigation();
 
 });
