@@ -295,3 +295,139 @@ cursor:pointer;
 margin-top:10px;
 
 }
+/* =====================================
+   FORMULAR REZERVĂRI
+===================================== */
+
+.reservation-toolbar{
+    display:flex;
+    gap:15px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+}
+
+.reservation-toolbar input{
+    flex:1;
+    min-width:220px;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+
+#reservationForm{
+
+    margin-top:20px;
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+#reservationForm input,
+#reservationForm textarea{
+
+    width:100%;
+
+    margin-bottom:15px;
+
+    padding:12px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+}
+
+#reservationForm textarea{
+
+    height:120px;
+
+    resize:vertical;
+
+}
+
+#saveReservation{
+
+    background:#2E7D32;
+
+    color:white;
+
+    border:none;
+
+    padding:15px;
+
+    width:100%;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    font-size:17px;
+
+}
+
+#saveReservation:hover{
+
+    background:#1B5E20;
+
+}
+
+#roomsContainer{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fill,minmax(90px,1fr));
+
+    gap:10px;
+
+    margin-bottom:20px;
+
+}
+
+.roomBox{
+
+    background:#f4f4f4;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    padding:10px;
+
+    text-align:center;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.roomBox:hover{
+
+    border-color:#2E7D32;
+
+}
+
+.roomBox.selected{
+
+    background:#2E7D32;
+
+    color:white;
+
+    border-color:#2E7D32;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
